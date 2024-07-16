@@ -1,11 +1,17 @@
-import { Navigate } from "react-router-dom";
-const getStoredData = JSON.parse(localStorage.getItem("user"));
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProtectedRoute = ({ element }) => {
-  if (!getStoredData) {
-    return <Navigate to="/login" replace />;
-  }
-  return element;
+  const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/login", { replace: true });
+    }
+  }, [user, navigate]);
+
+  return user ? element : null;
 };
 
 export default ProtectedRoute;
