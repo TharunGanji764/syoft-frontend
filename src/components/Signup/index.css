@@ -43,3 +43,13 @@
   right: 65px;
   top: 10px;
 }
+@media (max-width: 486px) {
+  .signup-form {
+    width: 80%;
+  }
+}
+@media (min-width: 487px) and (max-width: 724px) {
+  .signup-form {
+    width: 40%;
+  }
+}
