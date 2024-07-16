@@ -30,3 +30,14 @@
   right: 65px;
   top: 10px;
 }
+
+@media (max-width: 486px) {
+  .login-form {
+    width: 80%;
+  }
+}
+@media (min-width: 487px) and (max-width: 724px) {
+  .login-form {
+    width: 40%;
+  }
+}
