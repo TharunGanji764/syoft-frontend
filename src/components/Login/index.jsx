@@ -50,6 +50,7 @@ const Login = () => {
               name="user_email"
               className="input-field mb-3 w-75 form-control"
               onChange={handleOnChange}
+              required
             />
             <IoMdMail className="icon" />
           </div>
@@ -60,6 +61,7 @@ const Login = () => {
               name="user_password"
               className="input-field mb-3 w-75 form-control"
               onChange={handleOnChange}
+              required
             />
             {showPassword ? (
               <FaEye onClick={() => setShowPassword(false)} className="icon" />
